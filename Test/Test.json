@@ -1,0 +1,5 @@
+[
+    {"Name":"Home","Page":"Home.txt","Functions":"Home.js","Styles":"Home.css","Path":"./Test/Pages/Home/"},
+    {"Name":"Contact","Page":"Contact.txt","Functions":"Contact.js","Styles":"Contact.css","Path":"./Test/Pages/Contact/"},
+    {"Name":"Next","Page":"Contact.txt","Functions":"Contact.js","Styles":"Contact.css","Path":"./Test/Pages/Next/"}
+]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>localStorage.setItem("Env","Deva");localStorage.setItem("Config","Dev")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Robust Ontology</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        text-align: center;
+        font-family: Cambria,sans-serif;
+        text-decoration: none;
+        list-style: none;
+        border: none;
+        outline: none;
+    }
+    body{
+        background: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .PoweredBy{
+        color:forestgreen;
+    }
+    .BottomPower{
+        position: absolute;
+        left:0;
+        width:100%;
+        height: 100px;
+        bottom: 0;
+        display: block;
+    }
+    .OfflineContact{
+        display:inline-flex;
+        width: 80%;
+    }
+    a{
+        margin: auto;
+    }
+</style>
+<body>
+            <br><br>
+            <h1>OFFLINE</h1>
+            <br><br>
+            <p>Your Offline,Please Connect To The Internet.</p>
+            <br><br>
+            <button>Connect Now</button>
+            <br><br>
+            <p>If Issue Persists Contact Admin Via.</p>
+            <br>
+            <div class="OfflineContact">
+                <a href="eroinnovations9@gmail.com">Email</a>
+                <a href="eroinnovations9@gmail.com">WhatsApp</a>
+            </div>
+            <div class="BottomPower">
+                <p>Powered By <br><b class="PoweredBy">Elite Robust Ontology</b></p>
+            </div>
+</body>
+<script>
+    const ROUTECSS=e=>{const t=document.createElement("style");t.textContent=e,document.head.appendChild(t)};const BODY=document.querySelector("body");
+    const ROUTEJS = (jsCode) => {const script = document.createElement("script");script.textContent = `(function(){ ${jsCode} })();`;document.head.appendChild(script);};
+    const ROUTE=(e,t)=>{const a={page:e,backPage:t};history.state&&history.state.backPage?history.replaceState(a,"",`?page=${e}`):history.pushState(a,"",`?page=${e}`),sessionStorage.setItem("pageName",e),sessionStorage.setItem("backpageName",t);const o=localStorage.getItem(e),s=localStorage.getItem(e+"Styles"),g=localStorage.getItem(e+"Functions");o&&(document.body.innerHTML=o),s&&ROUTECSS(s),g&&ROUTEJS(g),window.onpopstate=e=>{const t=e.state,a=sessionStorage.getItem("backpageName");let o;o=t&&t.page?t.page===a?t.page:a||t.page:a||"Home",sessionStorage.setItem("pageName",o);const s=localStorage.getItem(o),g=localStorage.getItem(o+"Styles"),n=localStorage.getItem(o+"Functions");s&&(document.body.innerHTML=s),g&&ROUTECSS(g),n&&ROUTEJS(n)}};
+    const AUTOSTART=()=>{if (localStorage.getItem("Env") === "Dev" ) {const script = document.createElement("script");script.src = "./index.js";script.defer = true;document.head.appendChild(script);} else {const script = document.createElement("script");script.src = "https://erou-andrew-richard.github.io/erou-andrew-richard/Connection.js";script.defer = true;document.head.appendChild(script);};};if (localStorage.getItem("Env") === "Dev" ) {ROUTE("Home","Home");AUTOSTART();ROUTEJS(localStorage.getItem("CONFIG"));}else{if (localStorage.getItem("Updates")){ROUTE("Home","Home");ROUTEJS(localStorage.getItem("CONFIG"));if (navigator.onLine){AUTOSTART();};}else{if (navigator.onLine){AUTOSTART();}else{
+       /* BODY.innerHTML=`
+
+        `;*/
+    }     
+        }
+            
+    }
+
+
+</script>
+</html>
