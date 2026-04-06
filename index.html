@@ -23,6 +23,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        background:black;
     }
     .PoweredBy{
         color:forestgreen;
@@ -42,6 +43,12 @@
     a{
         margin: auto;
     }
+    .RetryButton{
+        background: green;
+        padding: 2vh;
+        border-radius: 10px;
+        color: white;
+    }
 </style>
 <body>
             <br><br>
@@ -49,7 +56,7 @@
             <br><br>
             <p>Your Offline,Please Connect To The Internet.</p>
             <br><br>
-            <button>Connect Now</button>
+            <button class="RetryButton">Connect Now</button>
             <br><br>
             <p>If Issue Persists Contact Admin Via.</p>
             <br>
@@ -68,9 +75,21 @@
        /* BODY.innerHTML=`
 
         `;*/
+
     }     
         }
             
     }
+        const bgColor = window.getComputedStyle(document.body).background;
+        const text=document.querySelectorAll("p,h1");
+        text.forEach(element => {
+
+            if (bgColor === "black") {
+                element.style.color = "white";
+            } else if (bgColor === "white") {
+                element.style.color = "black";
+            }
+            
+        });
 </script>
 </html>
